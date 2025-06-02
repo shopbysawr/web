@@ -283,7 +283,7 @@ a {
 }
 
 .cart-block .cart-item-inner {
-  padding: 16px;
+  padding: 16px 24px;
   background: white;
 }
 
@@ -1656,7 +1656,7 @@ ul > li.disabled {
   display: flex;
   position: relative;
   font-size: 0px;
-  left: 240px;
+  left: 320px;
   top: -38px;
 }
 
