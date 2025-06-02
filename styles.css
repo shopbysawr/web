@@ -1575,7 +1575,7 @@ ul > li.disabled {
 .cart-block .cart-container {
   position: absolute;
   width: 100%;
-  max-width: 450px;
+  max-width: 605px;
   height: 95%;
   margin: 24px;
   overflow: hidden;
@@ -1585,6 +1585,27 @@ ul > li.disabled {
   transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 16px;
   transform: translateX(100%);
+}
+
+.cart-block .cross-sell-message-wrapper-outer {
+  margin: 20px;
+}
+
+.cart-block
+  .cross-sell-message-wrapper-outer
+  .cross-sell-message-multi-contents
+  ul {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.js-show-available-cross-sell-discounts {
+  text-decoration: underline !important;
+}
+
+.cart-block .cross-sell-message-wrapper-outer.set-max-height {
+  max-height: 150px;
+  overflow-y: unset !important;
 }
 
 #header nav.header-nav-list .header-nav-item-level0 a.active {
