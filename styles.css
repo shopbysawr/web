@@ -2477,7 +2477,7 @@ h3 {
   .media-wrapper-outer
   .single-product-image-wrapper::after {
   content: "";
-  background: url("https://payhip.com/cdn-cgi/image/format=auto,width=auto/https://pe56d.s3.amazonaws.com/o_1id37pi6m1mbe1561nrbgpk1i07h.png")
+  background: url("https://raw.githubusercontent.com/shopbysawr/web/refs/heads/main/assets/WATERMARK.webp")
     no-repeat center center;
   background-size: contain;
   position: absolute;
