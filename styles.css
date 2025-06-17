@@ -2668,7 +2668,7 @@ h3 {
 #scroll-to-top {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   background-color: transparent;
   color: rgb(28, 23, 44);
   border: 1px solid rgb(28, 23, 44);
