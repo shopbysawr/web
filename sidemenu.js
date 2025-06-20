@@ -34,7 +34,6 @@
       { main: 94, collapsible: [95, 96, 97, 98] },
       { main: 99, collapsible: [100, 101, 102, 103] },
       { main: 106, collapsible: [107, 108] },
-      { main: 100, collapsible: [101, 102] },
     ];
 
     function collapseAll() {
