@@ -1,4 +1,3 @@
-
 (function() {
   document.addEventListener("DOMContentLoaded", function() {
     const wrapper = document.querySelector('.collection-vertical-wrapper');
@@ -20,21 +19,26 @@
     }
 
     // Categories data (index based on ul children, 1-based)
-const categories = [
-  { main: 4, collapsible: [5, 6, 7, 8] },
-  { main: 9, collapsible: [10, 11, 12, 13] },
-  { main: 14, collapsible: [15, 16, 17, 18, 19] },
-  { main: 20, collapsible: [21, 22, 23, 24, 25, 26, 27, 28] },
-  { main: 39, collapsible: [40, 41, 42, 43, 44, 45, 46, 47] },
-  { main: 48, collapsible: [49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66] },
-  { main: 75, collapsible: [76, 77] },
-  { main: 79, collapsible: [80, 81] },
-  { main: 82, collapsible: [83, 84, 85, 86] },
-  { main: 87, collapsible: [88, 89, 90, 91, 92, 93] },
-  { main: 94, collapsible: [95, 96, 97, 98] },
-  { main: 99, collapsible: [100, 101, 102, 103] },
-  { main: 106, collapsible: [107, 108] },
-];
+    const categories = [
+      { main: 4, collapsible: [5, 6, 7, 8] },
+      { main: 9, collapsible: [10, 11, 12, 13] },
+      { main: 14, collapsible: [15, 16, 17, 18, 19] },
+      { main: 20, collapsible: [21, 22, 23, 24, 25, 26, 27, 28] },
+
+      // NEW block you added (now main 39 + children 40..47)
+      { main: 39, collapsible: [40, 41, 42, 43, 44, 45, 46, 47] },
+
+      // Everything after has been shifted +9
+      { main: 48, collapsible: [49, 50, 51, 52, 53, 54, 55, 56] },
+      { main: 57, collapsible: [58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75] },
+      { main: 84, collapsible: [85, 86] },
+      { main: 88, collapsible: [89, 90] },
+      { main: 91, collapsible: [92, 93, 94, 95] },
+      { main: 96, collapsible: [97, 98, 99, 100, 101, 102] },
+      { main: 103, collapsible: [104, 105, 106, 107] },
+      { main: 108, collapsible: [109, 110, 111, 112] },
+      { main: 115, collapsible: [116, 117] },
+    ];
 
 
     function collapseAll() {
