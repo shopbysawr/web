@@ -31,13 +31,13 @@
       // Everything after has been shifted +9
       { main: 47, collapsible: [48, 49, 50, 51, 52, 53, 54, 55] },
       { main: 56, collapsible: [57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74] },
-      { main: 84, collapsible: [85, 86] },
-      { main: 88, collapsible: [89, 90] },
-      { main: 91, collapsible: [92, 93, 94, 95] },
-      { main: 96, collapsible: [97, 98, 99, 100, 101, 102] },
-      { main: 103, collapsible: [104, 105, 106, 107] },
-      { main: 108, collapsible: [109, 110, 111, 112] },
-      { main: 115, collapsible: [116, 117] },
+      { main: 83, collapsible: [84, 85] },
+      { main: 87, collapsible: [88, 89] },
+      { main: 90, collapsible: [91, 92, 93, 94] },
+      { main: 95, collapsible: [96, 97, 98, 99, 100, 101] },
+      { main: 102, collapsible: [103, 104, 105, 106] },
+      { main: 107, collapsible: [108, 109, 110, 111] },
+      { main: 114, collapsible: [115, 116] },
     ];
 
 
