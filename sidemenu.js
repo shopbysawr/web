@@ -26,11 +26,11 @@
       { main: 20, collapsible: [21, 22, 23, 24, 25, 26, 27, 28] },
 
       // NEW block you added (now main 39 + children 40..47)
-      { main: 39, collapsible: [40, 41, 42, 43, 44, 45, 46, 47] },
+      { main: 39, collapsible: [40, 41, 42, 43, 44, 45, 46] },
 
       // Everything after has been shifted +9
-      { main: 48, collapsible: [49, 50, 51, 52, 53, 54, 55, 56] },
-      { main: 57, collapsible: [58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75] },
+      { main: 47, collapsible: [48, 49, 50, 51, 52, 53, 54, 55] },
+      { main: 56, collapsible: [57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74] },
       { main: 84, collapsible: [85, 86] },
       { main: 88, collapsible: [89, 90] },
       { main: 91, collapsible: [92, 93, 94, 95] },
