@@ -95,11 +95,62 @@ const collections = [
     { id: "xpr50", title: "XPR50", productCount: 6, url: "https://shop.bysawr.com/search?q=XPR50" },
     { id: "svu-as", title: "SVU-AS", productCount: 5, url: "https://shop.bysawr.com/search?q=SVU-AS" },
     { id: "vs-recon", title: "VS Recon", productCount: 6, url: "https://shop.bysawr.com/search?q=vs%20recon" },
-    { id: "mx-17", title: "MX-17", productCount: 6, url: "https://shop.bysawr.com/search?q=MX-17" },
+    { id: "mxr-17", title: "MXR-17", productCount: 6, url: "https://shop.bysawr.com/search?q=MXR-17" },
   { id: "peacekeeper-mk1", title: "Peacekeeper MK1", productCount: 1, url: "https://shop.bysawr.com/search?q=Peacekeeper%20MK1" },
   { id: "graz-45k", title: "Graz 45K", productCount: 6, url: "https://shop.bysawr.com/search?q=Graz%2045K" },
-    { id: "m8a1", title: "M8A1", productCount: 6, url: "https://shop.bysawr.com/search?q=M8A1" }
+    { id: "m8a1", title: "M8A1", productCount: 6, url: "https://shop.bysawr.com/search?q=M8A1" },
+    // Primaries (Launch Roster - Meta Prioritet)
+{ id: "m15-mod-0", title: "M15 MOD 0", productCount: 5, url: "https://shop.bysawr.com/search?q=m15 mod 0" },
+{ id: "dravec-45", title: "Dravec 45", productCount: 5, url: "https://shop.bysawr.com/search?q=dravec 45" },
+{ id: "ak-27", title: "AK-27", productCount: 5, url: "https://shop.bysawr.com/search?q=ak-27" },
+{ id: "shadow-sk", title: "Shadow SK", productCount: 5, url: "https://shop.bysawr.com/search?q=shadow sk" },
+{ id: "vs-recon", title: "VS Recon", productCount: 5, url: "https://shop.bysawr.com/search?q=vs recon" }, // Allerede i din liste, men oppdatert count hvis du vil
+{ id: "ryden-45k", title: "Ryden 45K", productCount: 5, url: "https://shop.bysawr.com/search?q=ryden 45k" },
+{ id: "m10-breacher", title: "M10 Breacher", productCount: 5, url: "https://shop.bysawr.com/search?q=m10 breacher" },
+{ id: "mk-78", title: "MK.78", productCount: 5, url: "https://shop.bysawr.com/search?q=mk.78" },
+{ id: "rk-9", title: "RK-9", productCount: 5, url: "https://shop.bysawr.com/search?q=rk-9" },
+{ id: "razor-9mm", title: "Razor 9mm", productCount: 5, url: "https://shop.bysawr.com/search?q=razor 9mm" },
+{ id: "mxr-17", title: "MXR-17", productCount: 5, url: "https://shop.bysawr.com/search?q=mxr-17" }, // Allerede i din liste
+{ id: "x9-maverick", title: "X9 Maverick", productCount: 5, url: "https://shop.bysawr.com/search?q=x9 maverick" },
+{ id: "ds20-mirage", title: "DS20 Mirage", productCount: 5, url: "https://shop.bysawr.com/search?q=ds20 mirage" },
+{ id: "carbon-57", title: "Carbon 57", productCount: 5, url: "https://shop.bysawr.com/search?q=carbon 57" },
+{ id: "mpc-25", title: "MPC-25", productCount: 5, url: "https://shop.bysawr.com/search?q=mpc-25" },
+{ id: "echo-12", title: "Echo 12", productCount: 5, url: "https://shop.bysawr.com/search?q=echo 12" },
+{ id: "akita", title: "Akita", productCount: 5, url: "https://shop.bysawr.com/search?q=akita" },
+{ id: "xm325", title: "XM325", productCount: 5, url: "https://shop.bysawr.com/search?q=xm325" },
+{ id: "m8a1", title: "M8A1", productCount: 5, url: "https://shop.bysawr.com/search?q=m8a1" }, // Allerede i din liste
+{ id: "warden-308", title: "Warden 308", productCount: 5, url: "https://shop.bysawr.com/search?q=warden 308" },
+{ id: "m34-novaline", title: "M34 Novaline", productCount: 5, url: "https://shop.bysawr.com/search?q=m34 novaline" },
+{ id: "xr-3-ion", title: "XR-3 Ion", productCount: 5, url: "https://shop.bysawr.com/search?q=xr-3 ion" },
+{ id: "peacekeeper-mk1", title: "Peacekeeper MK1", productCount: 5, url: "https://shop.bysawr.com/search?q=peacekeeper mk1" }, // Allerede i din liste
 
+// Secondaries & Melee (Launch)
+{ id: "aarrow-109", title: "AAROW 109", productCount: 5, url: "https://shop.bysawr.com/search?q=aarrow 109" },
+{ id: "arc-m1", title: "A.R.C. M1", productCount: 5, url: "https://shop.bysawr.com/search?q=a.r.c. m1" },
+{ id: "jager-45", title: "Jäger 45", productCount: 5, url: "https://shop.bysawr.com/search?q=jager 45" },
+{ id: "velox-5-7", title: "Velox 5.7", productCount: 5, url: "https://shop.bysawr.com/search?q=velox 5.7" },
+{ id: "coda-9", title: "Coda 9", productCount: 5, url: "https://shop.bysawr.com/search?q=coda 9" },
+{ id: "knife", title: "Knife", productCount: 5, url: "https://shop.bysawr.com/search?q=knife" },
+{ id: "flatline-mkii", title: "Flatline Mk.II", productCount: 5, url: "https://shop.bysawr.com/search?q=flatline mk.ii" },
+
+// Season 1 Additions (AI/Preview-Fokus, som du nevnte)
+{ id: "kogot-7", title: "Kogot-7 (S1)", productCount: 5, url: "https://shop.bysawr.com/search?q=kogot-7" },
+{ id: "maddox-rfb", title: "Maddox RFB (S1)", productCount: 5, url: "https://shop.bysawr.com/search?q=maddox rfb" },
+{ id: "sokol-545", title: "Sokol 545 (S1)", productCount: 5, url: "https://shop.bysawr.com/search?q=sokol 545" },
+{ id: "nx-ravager", title: "NX Ravager (S1)", productCount: 5, url: "https://shop.bysawr.com/search?q=nx ravager" },
+{ id: "ballistic-knife", title: "Ballistic Knife (S1)", productCount: 5, url: "https://shop.bysawr.com/search?q=ballistic knife" },
+{ id: "sturmwolf-45", title: "Sturmwolf 45 (S1)", productCount: 5, url: "https://shop.bysawr.com/search?q=sturmwolf 45" },
+{ id: "hawker-hx", title: "Hawker HX (S1)", productCount: 5, url: "https://shop.bysawr.com/search?q=hawker hx" },
+// Zombies Mastery Camos (4 stk – Golden Dragon → Infestation)
+{ id: "golden-dragon-camo", title: "Golden Dragon Camo", productCount: 5, url: "https://shop.bysawr.com/search?q=golden dragon" },
+{ id: "bloodstone-camo", title: "Bloodstone Camo", productCount: 5, url: "https://shop.bysawr.com/search?q=bloodstone" },
+{ id: "doomsteel-camo", title: "Doomsteel Camo", productCount: 5, url: "https://shop.bysawr.com/search?q=doomsteel" },
+{ id: "infestation-camo", title: "Infestation Camo", productCount: 5, url: "https://shop.bysawr.com/search?q=infestation" },
+// BO7 Mastery Camos (Multiplayer Tiers)
+{ id: "shattered-gold-camo", title: "Shattered Gold Camo", productCount: 5, url: "https://shop.bysawr.com/search?q=shattered gold" },
+{ id: "arclight-camo", title: "Arclight Camo", productCount: 5, url: "https://shop.bysawr.com/search?q=arclight" },
+{ id: "tempest-camo", title: "Tempest Camo", productCount: 5, url: "https://shop.bysawr.com/search?q=tempest" },
+{ id: "singularity-camo", title: "Singularity Camo", productCount: 5, url: "https://shop.bysawr.com/search?q=singularity" }
 ];
 
 // Function to round productCount and add "+"
