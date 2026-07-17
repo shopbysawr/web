@@ -18,11 +18,14 @@
     wrapper.insertBefore(searchInput, list);
 
     // ---------------------------------------------------------------
-    // Everything below is keyed on the collection slug (the last part
-    // of the href), so the order in Payhip's HTML doesn't matter.
+    // Everything is keyed on the collection slug (last part of the
+    // href), so the order in Payhip's HTML doesn't matter.
+    //
+    // groups    = top-level parent -> direct children (chevron level 1)
+    // subgroups = second-level parent -> its children (chevron level 2)
+    //             e.g. MWIII > Sniper Rifles > KATT-AMR
     // ---------------------------------------------------------------
 
-    // Parent slug -> child slugs (collapsible under the parent)
     const groups = {
       'premade':          ['premade-thumbnails', 'premade-cutouts', 'emotes', 'mascot-logos'],
       'graphics':         ['psds', 'renders-pngs', 'layer-styles', 'hand-packs'],
@@ -34,10 +37,18 @@
       'black-ops-2':      ['svu-as', 'dsr50', 'ballista', 'xpr-50'],
       'ghosts':           ['usr', 'lynx'],
       'black-ops-3':      ['svg', 'locus'],
-      'mwiii':            ['mwiii-sniper-rifles', 'katt-amr', 'longbow', 'kv-inhibitor', 'xrk-stalker', 'signal50', 'mcpr-300', 'victus-xmr', 'sp-x-80', 'la-b-300', 'fjx-imperium', 'mwiii-assault-rifles', 'smgs', 'mwiii-battle-rifles', 'mwiii-shotguns', 'mwiii-lmgs', 'mwiii-marksman-rifles', 'mwiii-secondaries'],
+      'mwiii':            ['mwiii-sniper-rifles', 'mwiii-assault-rifles', 'smgs', 'mwiii-battle-rifles', 'mwiii-shotguns', 'mwiii-lmgs', 'mwiii-marksman-rifles', 'mwiii-secondaries'],
       'black-ops-6':      ['bo6-sniper-rifles', 'bo6-assault-rifles', 'bo6-smgs', 'bo6-lmgs', 'bo6-shotguns', 'bo6-handguns', 'bo6-launchers', 'bo6-melee-weapons'],
       'black-ops-7':      ['bo7-sniper-rifles', 'bo7-assault-rifles', 'bo7-smgs', 'bo7-lmgs', 'bo7-shotguns', 'bo7-secondaries', 'bo7-misc'],
+      'mw4':              ['mw4-sniper-rifles', 'mw4-assault-rifles', 'mw4-smgs', 'mw4-lmgs', 'mw4-shotguns', 'mw4-marksman-rifles', 'mw4-secondaries', 'mw4-misc'],
       'zombies':          ['ray-gun', 'blundergat'],
+    };
+
+    // Second-level parents that have their own collapsible children.
+    // Add e.g. 'mw4-sniper-rifles': ['weapon-slug', ...] when you make
+    // per-weapon collections for MW4.
+    const subgroups = {
+      'mwiii-sniper-rifles': ['katt-amr', 'longbow', 'kv-inhibitor', 'xrk-stalker', 'signal50', 'mcpr-300', 'victus-xmr', 'sp-x-80', 'la-b-300', 'fjx-imperium'],
     };
 
     // Top-level order. CoD games run oldest -> newest so the newest
@@ -80,6 +91,7 @@
       'mwiii',            // 2023
       'black-ops-6',      // 2024
       'black-ops-7',      // 2025
+      'mw4',              // 2026
       'zombies',
       'call-of-duty-mobile',
       'map-screenshot-packs',
@@ -95,9 +107,9 @@
       'xdefiant',
     ];
 
-    // Visual levels for the CSS (append-on CSS targets [data-slug]/[data-level])
-    // Level 1 = bold main categories, level 2 = weapon classes (40px indent),
-    // level 3 = individual weapons (60px indent). Everything else = default.
+    // Visual levels for the CSS ([data-level] in styles.css)
+    // 1 = bold main categories, 2 = weapon classes (40px indent),
+    // 3 = individual weapons (60px indent). Everything else = default.
     const level1 = [
       'all', 'most-popular', 'templates', 'premade', 'graphics', 'editing',
       'animations', 'minecraft', 'counter-strike', 'grand-theft-auto',
@@ -109,6 +121,7 @@
       'bo7-sniper-rifles', 'bo7-assault-rifles', 'bo7-smgs', 'bo7-lmgs', 'bo7-shotguns', 'bo7-secondaries', 'bo7-misc',
       'bo6-sniper-rifles', 'bo6-assault-rifles', 'bo6-smgs', 'bo6-lmgs', 'bo6-shotguns', 'bo6-handguns', 'bo6-launchers', 'bo6-melee-weapons',
       'mwiii-sniper-rifles', 'mwiii-assault-rifles', 'smgs', 'mwiii-battle-rifles', 'mwiii-shotguns', 'mwiii-lmgs', 'mwiii-marksman-rifles', 'mwiii-secondaries',
+      'mw4-sniper-rifles', 'mw4-assault-rifles', 'mw4-smgs', 'mw4-lmgs', 'mw4-shotguns', 'mw4-marksman-rifles', 'mw4-secondaries', 'mw4-misc',
     ];
     const level3 = [
       'katt-amr', 'longbow', 'kv-inhibitor', 'xrk-stalker', 'signal50', 'mcpr-300', 'victus-xmr', 'sp-x-80', 'la-b-300', 'fjx-imperium',
@@ -133,8 +146,7 @@
       else if (level3.includes(slug)) li.dataset.level = '3';
     });
 
-    // Reorder the DOM: each top-level item followed by its children.
-    // Unknown slugs (new collections not listed yet) keep their spot at the end.
+    // Reorder the DOM: parent, then children, then grandchildren.
     order.forEach(slug => {
       const li = itemsBySlug[slug];
       if (!li) return;
@@ -142,26 +154,54 @@
       (groups[slug] || []).forEach(childSlug => {
         const childLi = itemsBySlug[childSlug];
         if (childLi) list.appendChild(childLi);
+        (subgroups[childSlug] || []).forEach(grandSlug => {
+          const grandLi = itemsBySlug[grandSlug];
+          if (grandLi) list.appendChild(grandLi);
+        });
       });
     });
 
-    const allChildSlugs = Object.values(groups).flat();
-    const isChild = slug => allChildSlugs.includes(slug);
+    // Unknown slugs (new collections not added to `order`/`groups` yet)
+    // go to the bottom of the menu instead of ending up on top.
+    const knownSlugs = new Set(
+      order
+        .concat(Object.values(groups).flat())
+        .concat(Object.values(subgroups).flat())
+    );
+    Object.keys(itemsBySlug).forEach(slug => {
+      if (!knownSlugs.has(slug)) list.appendChild(itemsBySlug[slug]);
+    });
 
-    function collapseAll() {
-      allChildSlugs.forEach(slug => {
-        const li = itemsBySlug[slug];
-        if (li) li.style.display = 'none';
-      });
-      document.querySelectorAll('.chevron-wrapper').forEach(w => {
-        w.setAttribute('data-expanded', 'false');
-        w.setAttribute('aria-expanded', 'false');
-        const icon = w.querySelector('iconify-icon');
-        if (icon) icon.setAttribute('icon', 'tabler:chevron-down');
-      });
+    // slug -> parent slug (both levels), and the set of all collapsible items
+    const parentOf = {};
+    Object.entries(groups).forEach(([p, kids]) => kids.forEach(k => { parentOf[k] = p; }));
+    Object.entries(subgroups).forEach(([p, kids]) => kids.forEach(k => { parentOf[k] = p; }));
+    const allChildSlugs = Object.keys(parentOf);
+
+    // Visibility helpers — class-based so CSS can animate the transition
+    function hideItem(slug) {
+      const li = itemsBySlug[slug];
+      if (li) li.classList.add('sm-hidden');
+    }
+    function showItem(slug) {
+      const li = itemsBySlug[slug];
+      if (li) li.classList.remove('sm-hidden');
+    }
+    function setExpanded(slug, expanded) {
+      const li = itemsBySlug[slug];
+      const cw = li && li.querySelector('.chevron-wrapper');
+      if (!cw) return;
+      cw.setAttribute('data-expanded', expanded ? 'true' : 'false');
+      cw.setAttribute('aria-expanded', expanded ? 'true' : 'false');
     }
 
-    function addChevronAndToggle(parentSlug, childSlugs) {
+    function collapseAll() {
+      allChildSlugs.forEach(hideItem);
+      Object.keys(groups).forEach(slug => setExpanded(slug, false));
+      Object.keys(subgroups).forEach(slug => setExpanded(slug, false));
+    }
+
+    function addChevronAndToggle(parentSlug, childSlugs, isTopLevel) {
       const parentLi = itemsBySlug[parentSlug];
       if (!parentLi) return;
       const parentLink = parentLi.querySelector('a');
@@ -199,39 +239,40 @@
       chevronWrapper.addEventListener('click', function(event) {
         event.preventDefault();
         const isExpanded = chevronWrapper.getAttribute('data-expanded') === 'true';
-        collapseAll();
-        if (!isExpanded) {
-          childSlugs.forEach(slug => {
-            const li = itemsBySlug[slug];
-            if (li) li.style.display = 'list-item';
-          });
-          chevronWrapper.setAttribute('data-expanded', 'true');
-          chevronWrapper.setAttribute('aria-expanded', 'true');
-          const icon = chevron.querySelector('iconify-icon');
-          icon.setAttribute('icon', 'tabler:chevron-up');
-        }
-      });
 
-      // Hide children initially
-      childSlugs.forEach(slug => {
-        const li = itemsBySlug[slug];
-        if (li) li.style.display = 'none';
+        if (isTopLevel) {
+          // Accordion behaviour between top-level categories
+          collapseAll();
+          if (!isExpanded) {
+            childSlugs.forEach(showItem);
+            setExpanded(parentSlug, true);
+          }
+        } else {
+          // Nested toggle: only open/close this subgroup's own children
+          if (isExpanded) {
+            childSlugs.forEach(hideItem);
+            setExpanded(parentSlug, false);
+          } else {
+            childSlugs.forEach(showItem);
+            setExpanded(parentSlug, true);
+          }
+        }
       });
     }
 
-    Object.keys(groups).forEach(parentSlug => {
-      addChevronAndToggle(parentSlug, groups[parentSlug]);
-    });
+    Object.keys(groups).forEach(slug => addChevronAndToggle(slug, groups[slug], true));
+    Object.keys(subgroups).forEach(slug => addChevronAndToggle(slug, subgroups[slug], false));
 
     function showDefault() {
       Object.keys(itemsBySlug).forEach(slug => {
-        itemsBySlug[slug].style.display = isChild(slug) ? 'none' : 'list-item';
+        if (allChildSlugs.includes(slug)) hideItem(slug);
+        else showItem(slug);
       });
       collapseAll();
     }
     showDefault();
 
-    // Search filtering with parent visibility
+    // Search filtering with parent visibility (walks all ancestor levels)
     searchInput.addEventListener('input', function() {
       const searchTerm = this.value.toLowerCase();
 
@@ -240,41 +281,21 @@
         return;
       }
 
-      // Hide everything, then show matches
-      Object.values(itemsBySlug).forEach(li => li.style.display = 'none');
-
-      const matchedParents = new Set();
+      Object.keys(itemsBySlug).forEach(hideItem);
+      Object.keys(groups).forEach(slug => setExpanded(slug, false));
+      Object.keys(subgroups).forEach(slug => setExpanded(slug, false));
 
       Object.keys(itemsBySlug).forEach(slug => {
         const li = itemsBySlug[slug];
-        if (li.textContent.toLowerCase().includes(searchTerm)) {
-          li.style.display = 'list-item';
-          // If it's a child, remember its parent; if a parent, itself
-          Object.keys(groups).forEach(parentSlug => {
-            if (groups[parentSlug].includes(slug)) matchedParents.add(parentSlug);
-            if (parentSlug === slug) matchedParents.add(parentSlug);
-          });
-        }
-      });
+        if (!li.textContent.toLowerCase().includes(searchTerm)) return;
 
-      // Reset all chevrons, then expand parents with visible children
-      document.querySelectorAll('.chevron-wrapper').forEach(w => {
-        w.setAttribute('data-expanded', 'false');
-        w.setAttribute('aria-expanded', 'false');
-        const icon = w.querySelector('iconify-icon');
-        if (icon) icon.setAttribute('icon', 'tabler:chevron-down');
-      });
-
-      matchedParents.forEach(parentSlug => {
-        const parentLi = itemsBySlug[parentSlug];
-        if (parentLi) parentLi.style.display = 'list-item';
-
-        const chevronWrapper = parentLi && parentLi.querySelector('.chevron-wrapper');
-        if (chevronWrapper) {
-          chevronWrapper.setAttribute('data-expanded', 'true');
-          chevronWrapper.setAttribute('aria-expanded', 'true');
-          const icon = chevronWrapper.querySelector('iconify-icon');
-          if (icon) icon.setAttribute('icon', 'tabler:chevron-up');
+        showItem(slug);
+        // Show and expand every ancestor so the match is visible in context
+        let parent = parentOf[slug];
+        while (parent) {
+          showItem(parent);
+          setExpanded(parent, true);
+          parent = parentOf[parent];
         }
       });
     });
