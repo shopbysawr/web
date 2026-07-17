@@ -95,13 +95,42 @@
       'xdefiant',
     ];
 
-    // Map slug -> <li> element
+    // Visual levels for the CSS (append-on CSS targets [data-slug]/[data-level])
+    // Level 1 = bold main categories, level 2 = weapon classes (40px indent),
+    // level 3 = individual weapons (60px indent). Everything else = default.
+    const level1 = [
+      'all', 'most-popular', 'templates', 'premade', 'graphics', 'editing',
+      'animations', 'minecraft', 'counter-strike', 'grand-theft-auto',
+      'valorant', 'among-us', 'apex-legends', 'fortnite', 'rocket-league',
+      'battlefield-6', 'call-of-duty', 'false-front', 'free', 'logos',
+      'marvel-rivals', 'collabs', 'splitgate-2', 'xdefiant',
+    ];
+    const level2 = [
+      'bo7-sniper-rifles', 'bo7-assault-rifles', 'bo7-smgs', 'bo7-lmgs', 'bo7-shotguns', 'bo7-secondaries', 'bo7-misc',
+      'bo6-sniper-rifles', 'bo6-assault-rifles', 'bo6-smgs', 'bo6-lmgs', 'bo6-shotguns', 'bo6-handguns', 'bo6-launchers', 'bo6-melee-weapons',
+      'mwiii-sniper-rifles', 'mwiii-assault-rifles', 'smgs', 'mwiii-battle-rifles', 'mwiii-shotguns', 'mwiii-lmgs', 'mwiii-marksman-rifles', 'mwiii-secondaries',
+    ];
+    const level3 = [
+      'katt-amr', 'longbow', 'kv-inhibitor', 'xrk-stalker', 'signal50', 'mcpr-300', 'victus-xmr', 'sp-x-80', 'la-b-300', 'fjx-imperium',
+      'svg', 'locus', 'usr', 'lynx',
+      'svu-as', 'dsr50', 'ballista', 'xpr-50',
+      'barrett-50cal-mw3', 'l118a', 'as50', 'rsass', 'dragunov', 'msr',
+      'dragunov-bo1', 'wa2000-bo1', 'l96a1', 'psg-1',
+      'intervention', 'barrett-50cal', 'wa2000', 'm21-ebr',
+      'ray-gun', 'blundergat',
+    ];
+
+    // Map slug -> <li> element, and tag each li for the CSS
     const itemsBySlug = {};
     Array.from(list.children).forEach(li => {
       const link = li.querySelector('a');
       if (!link) return;
       const slug = link.getAttribute('href').replace(/\/+$/, '').split('/').pop();
       itemsBySlug[slug] = li;
+      li.dataset.slug = slug;
+      if (level1.includes(slug))      li.dataset.level = '1';
+      else if (level2.includes(slug)) li.dataset.level = '2';
+      else if (level3.includes(slug)) li.dataset.level = '3';
     });
 
     // Reorder the DOM: each top-level item followed by its children.
