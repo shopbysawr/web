@@ -205,7 +205,7 @@
       'marvel-rivals',
       'collabs',
       'splitgate-2',
-      'xdefiant',
+      'the-finals',
     ];
 
     // Short prefixes -> the game they belong to, for auto-nesting of
@@ -226,7 +226,7 @@
       'animations', 'minecraft', 'counter-strike', 'grand-theft-auto',
       'valorant', 'among-us', 'apex-legends', 'fortnite', 'rocket-league',
       'battlefield-6', 'call-of-duty', 'false-front', 'free', 'logos',
-      'marvel-rivals', 'collabs', 'splitgate-2', 'xdefiant',
+      'marvel-rivals', 'collabs', 'splitgate-2', 'the-finals',
     ];
 
     // ---- Flatten the tree into lookup maps ----
