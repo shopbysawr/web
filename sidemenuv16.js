@@ -145,7 +145,7 @@
       ['premade', ['premade-thumbnails', 'premade-cutouts', 'emotes', 'mascot-logos']],
       ['graphics', ['psds', 'renders-pngs', 'layer-styles', 'hand-packs']],
       ['editing', ['preset-packs', 'subtitle-packs', 'sound-effects', 'green-screen', 'transitions']],
-      ['animations', ['youtube', 'kick', 'threads', 'twitter', 'tiktok', 'instagram', 'twitch', 'facebook', 'snapchat', 'animation-bundles']],
+      ['animations', ['youtube', 'twitch', 'kick', 'tiktok', 'instagram', 'twitter', 'facebook', 'snapchat', 'threads', 'animation-bundles']],
       'minecraft',
       'counter-strike',
       'grand-theft-auto',
@@ -163,8 +163,12 @@
           ['mwiii-sniper-rifles', ['katt-amr', 'longbow', 'kv-inhibitor', 'xrk-stalker', 'signal50', 'mcpr-300', 'victus-xmr', 'sp-x-80', 'la-b-300', 'fjx-imperium']],
           'mwiii-assault-rifles', 'smgs', 'mwiii-battle-rifles', 'mwiii-shotguns', 'mwiii-lmgs', 'mwiii-marksman-rifles', 'mwiii-secondaries',
         ]],
-        'mwii',                                                                        // 2022
-        'vanguard',                                                                    // 2021
+        ['mwii', [                                                                     // 2022
+          'mwii-sniper-rifles', 'mwii-assault-rifles', 'mwii-smgs',
+        ]],
+        ['vanguard', [                                                                 // 2021
+          'vanguard-sniper-rifles',
+        ]],
         'cold-war',                                                                    // 2020
         'mw2019',                                                                      // 2019
         'bo4',                                                                         // 2018
@@ -186,13 +190,19 @@
         ]],
         ['black-ops-1', [                                                              // 2010
           ['bo1-sniper-rifles', ['dragunov-bo1', 'wa2000-bo1', 'l96a1', 'psg-1']],
+          'bo1-assault-rifles',
         ]],
         ['modern-warfare-2', [                                                         // 2009
           ['mw2-sniper-rifles', ['intervention', 'barrett-50cal', 'wa2000', 'm21-ebr']],
+          'mw2-assault-rifles', 'mw2-secondaries', 'mw2-misc',
         ]],
-        'world-at-war',                                                                // 2008
-        'cod-4',                                                                       // 2007
-        ['zombies', ['ray-gun', 'blundergat']],
+        ['world-at-war', [                                                             // 2008
+          'waw-sniper-rifles',
+        ]],
+        ['cod-4', [                                                                    // 2007
+          ['cod4-sniper-rifles', ['m40a3', 'r700']],
+        ]],
+        ['zombies', ['ray-gun', 'thundergun', 'wunderwaffe', 'blundergat']],
         'call-of-duty-mobile',
         'map-screenshot-packs',
         'callsigns',
@@ -218,6 +228,7 @@
       'bo3':    'black-ops-3',
       'waw':    'world-at-war',
       'codm':   'call-of-duty-mobile',
+      'cod4':   'cod-4',
     };
 
     // Top-level items that get the bold "main category" styling
