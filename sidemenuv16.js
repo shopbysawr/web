@@ -159,33 +159,33 @@
         // Weapon categories always follow the same order:
         // Assault Rifles, Battle Rifles, SMGs, Shotguns, LMGs, Marksman Rifles,
         // Sniper Rifles, Secondaries, Launchers, Melee, Misc.
-        ['mw4', ['mw4-assault-rifles', 'mw4-smgs', 'mw4-shotguns', 'mw4-lmgs', 'mw4-marksman-rifles', 'mw4-sniper-rifles', 'mw4-secondaries', 'mw4-misc']], // 2026
-        ['black-ops-7', ['bo7-assault-rifles', 'bo7-smgs', 'bo7-shotguns', 'bo7-lmgs', 'bo7-sniper-rifles', 'bo7-secondaries', 'bo7-misc']], // 2025
-        ['black-ops-6', ['bo6-assault-rifles', 'bo6-smgs', 'bo6-shotguns', 'bo6-lmgs', 'bo6-sniper-rifles', 'bo6-handguns', 'bo6-launchers', 'bo6-melee-weapons']], // 2024
+        ['mw4', ['mw4-assault-rifles', 'mw4-smgs', 'mw4-shotguns', 'mw4-lmgs', 'mw4-marksman-rifles', ['mw4-sniper-rifles', ['mw4-signal-50', 'mw4-kg-7-vulcan', 'mw4-mosin-nagant', 'mw4-astaroth-57']], 'mw4-secondaries', 'mw4-misc']], // 2026
+        ['black-ops-7', ['bo7-assault-rifles', 'bo7-smgs', 'bo7-shotguns', 'bo7-lmgs', ['bo7-sniper-rifles', ['bo7-vs-recon', 'bo7-xr-3-ion', 'bo7-shadow-sk', 'bo7-hawker-hx', 'bo7-strider-300']], 'bo7-secondaries', 'bo7-misc']], // 2025
+        ['black-ops-6', ['bo6-assault-rifles', 'bo6-smgs', 'bo6-shotguns', 'bo6-lmgs', ['bo6-sniper-rifles', ['bo6-lr-762', 'bo6-svd', 'bo6-lw3a1-frostline', 'bo6-amr-mod-4', 'bo6-hdr']], 'bo6-handguns', 'bo6-launchers', 'bo6-melee-weapons']], // 2024
         ['mwiii', [                                                                    // 2023
           'mwiii-assault-rifles', 'mwiii-battle-rifles', 'smgs', 'mwiii-shotguns', 'mwiii-lmgs', 'mwiii-marksman-rifles',
           ['mwiii-sniper-rifles', ['katt-amr', 'longbow', 'kv-inhibitor', 'xrk-stalker', 'signal50', 'mcpr-300', 'victus-xmr', 'sp-x-80', 'la-b-300', 'fjx-imperium']],
           'mwiii-secondaries',
         ]],
-        ['mwii', ['mwii-assault-rifles', 'mwii-smgs', 'mwii-marksman-rifles', 'mwii-sniper-rifles']], // 2022
-        ['vanguard', ['vanguard-sniper-rifles']],                                       // 2021
-        ['cold-war', ['cold-war-sniper-rifles']],                                       // 2020
-        ['mw2019', ['mw2019-sniper-rifles']],                                           // 2019
-        ['bo4', ['bo4-sniper-rifles']],                                                 // 2018
-        ['ww2', ['ww2-sniper-rifles']],                                                 // 2017
-        ['mwr', ['mwr-sniper-rifles']],                                                 // 2016
-        ['iw', ['iw-sniper-rifles']],                                                   // 2016
+        ['mwii', ['mwii-assault-rifles', 'mwii-smgs', 'mwii-marksman-rifles', ['mwii-sniper-rifles', ['mwii-signal-50', 'mwii-mcpr-300', 'mwii-la-b-300', 'mwii-fjx-imperium', 'mwii-victus-xmr', 'mwii-sp-x-80', 'mwii-carrack-300']]]], // 2022
+        ['vanguard', [['vanguard-sniper-rifles', ['vanguard-kar98k', 'vanguard-3-line-rifle']]]],                                       // 2021
+        ['cold-war', [['cold-war-sniper-rifles', ['cold-war-lw3-tundra', 'cold-war-pellington-703', 'cold-war-swiss-k31', 'cold-war-zrg-20mm']]]],                                       // 2020
+        ['mw2019', [['mw2019-sniper-rifles', ['mw2019-ax-50']]]],                                           // 2019
+        ['bo4', [['bo4-sniper-rifles', ['bo4-koshka', 'bo4-paladin']]]],                                                 // 2018
+        ['ww2', [['ww2-sniper-rifles', ['ww2-kar98k', 'ww2-m1903', 'ww2-ptrs-41', 'ww2-type-38', 'ww2-m36', 'ww2-lever-action', 'ww2-lee-enfield', 'ww2-karabin', 'ww2-de-lisle', 'ww2-3-line-rifle']]]],                                                 // 2017
+        ['mwr', [['mwr-sniper-rifles', ['mwr-s-tac', 'mwr-m40a3']]]],                                                 // 2016
+        ['iw', [['iw-sniper-rifles', ['iw-kbs-longbow', 'iw-widowmaker', 'iw-trek-50', 'iw-tf-141', 'iw-proteus', 'iw-ebr-800', 'iw-dmr-1']]]],                                                   // 2016
         ['black-ops-3', [                                                              // 2015
-          ['bo3-sniper-rifles', ['svg', 'locus']],
+          ['bo3-sniper-rifles', ['svg', 'locus', 'bo3-drakon', 'bo3-p-06', 'bo3-dragoon', 'bo3-rsa-interdiction', 'bo3-dbsr-50']],
         ]],
-        ['aw', ['aw-sniper-rifles']],                                                   // 2014
+        ['aw', [['aw-sniper-rifles', ['aw-mors', 'aw-svo', 'aw-lynx', 'aw-lever-action']]]],                                                   // 2014
         ['ghosts', [                                                                   // 2013
           'ghosts-assault-rifles',
-          ['ghosts-sniper-rifles', ['usr', 'lynx', 'l115']],
+          ['ghosts-sniper-rifles', ['usr', 'lynx', 'l115', 'ghosts-vks']],
         ]],
         ['black-ops-2', [                                                              // 2012
           'bo2-assault-rifles', 'bo2-smgs',
-          ['bo2-sniper-rifles', ['svu-as', 'dsr50', 'ballista', 'xpr-50']],
+          ['bo2-sniper-rifles', ['svu-as', 'dsr50', 'ballista', 'xpr-50', 'bo2-barrett-m82a1', 'bo2-storm-psr']],
         ]],
         ['modern-warfare-3', [                                                         // 2011
           ['mw3-sniper-rifles', ['barrett-50cal-mw3', 'l118a', 'as50', 'rsass', 'dragunov', 'msr']],
@@ -199,9 +199,9 @@
           ['mw2-sniper-rifles', ['intervention', 'barrett-50cal', 'wa2000', 'm21-ebr']],
           'mw2-secondaries', 'mw2-misc',
         ]],
-        ['world-at-war', ['waw-sniper-rifles']],                                        // 2008
+        ['world-at-war', [['waw-sniper-rifles', ['waw-kar98k', 'waw-ptrs-41', 'waw-mosin-nagant', 'waw-springfield', 'waw-arisaka']]]],                                        // 2008
         ['cod-4', [                                                                    // 2007
-          ['cod4-sniper-rifles', ['m40a3', 'r700']],
+          ['cod4-sniper-rifles', ['m40a3', 'r700', 'cod4-barrett-50cal', 'cod4-m21', 'cod4-dragunov']],
         ]],
         ['zombies', [
           ['blundergat', ['ray-gun', 'thundergun', 'wunderwaffe']],                    // "Wonder Weapons"
