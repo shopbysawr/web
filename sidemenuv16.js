@@ -156,53 +156,56 @@
       'rocket-league',
       'battlefield-6',
       ['call-of-duty', [
-        ['mw4', ['mw4-sniper-rifles', 'mw4-assault-rifles', 'mw4-smgs', 'mw4-lmgs', 'mw4-shotguns', 'mw4-marksman-rifles', 'mw4-secondaries', 'mw4-misc']], // 2026
-        ['black-ops-7', ['bo7-sniper-rifles', 'bo7-assault-rifles', 'bo7-smgs', 'bo7-lmgs', 'bo7-shotguns', 'bo7-secondaries', 'bo7-misc']], // 2025
-        ['black-ops-6', ['bo6-sniper-rifles', 'bo6-assault-rifles', 'bo6-smgs', 'bo6-lmgs', 'bo6-shotguns', 'bo6-handguns', 'bo6-launchers', 'bo6-melee-weapons']], // 2024
+        // Weapon categories always follow the same order:
+        // Assault Rifles, Battle Rifles, SMGs, Shotguns, LMGs, Marksman Rifles,
+        // Sniper Rifles, Secondaries, Launchers, Melee, Misc.
+        ['mw4', ['mw4-assault-rifles', 'mw4-smgs', 'mw4-shotguns', 'mw4-lmgs', 'mw4-marksman-rifles', 'mw4-sniper-rifles', 'mw4-secondaries', 'mw4-misc']], // 2026
+        ['black-ops-7', ['bo7-assault-rifles', 'bo7-smgs', 'bo7-shotguns', 'bo7-lmgs', 'bo7-sniper-rifles', 'bo7-secondaries', 'bo7-misc']], // 2025
+        ['black-ops-6', ['bo6-assault-rifles', 'bo6-smgs', 'bo6-shotguns', 'bo6-lmgs', 'bo6-sniper-rifles', 'bo6-handguns', 'bo6-launchers', 'bo6-melee-weapons']], // 2024
         ['mwiii', [                                                                    // 2023
+          'mwiii-assault-rifles', 'mwiii-battle-rifles', 'smgs', 'mwiii-shotguns', 'mwiii-lmgs', 'mwiii-marksman-rifles',
           ['mwiii-sniper-rifles', ['katt-amr', 'longbow', 'kv-inhibitor', 'xrk-stalker', 'signal50', 'mcpr-300', 'victus-xmr', 'sp-x-80', 'la-b-300', 'fjx-imperium']],
-          'mwiii-assault-rifles', 'smgs', 'mwiii-battle-rifles', 'mwiii-shotguns', 'mwiii-lmgs', 'mwiii-marksman-rifles', 'mwiii-secondaries',
+          'mwiii-secondaries',
         ]],
-        ['mwii', [                                                                     // 2022
-          'mwii-sniper-rifles', 'mwii-assault-rifles', 'mwii-smgs',
-        ]],
-        ['vanguard', [                                                                 // 2021
-          'vanguard-sniper-rifles',
-        ]],
-        'cold-war',                                                                    // 2020
-        'mw2019',                                                                      // 2019
-        'bo4',                                                                         // 2018
-        'ww2',                                                                         // 2017
-        'mwr',                                                                         // 2016
-        'iw',                                                                          // 2016
+        ['mwii', ['mwii-assault-rifles', 'mwii-smgs', 'mwii-marksman-rifles', 'mwii-sniper-rifles']], // 2022
+        ['vanguard', ['vanguard-sniper-rifles']],                                       // 2021
+        ['cold-war', ['cold-war-sniper-rifles']],                                       // 2020
+        ['mw2019', ['mw2019-sniper-rifles']],                                           // 2019
+        ['bo4', ['bo4-sniper-rifles']],                                                 // 2018
+        ['ww2', ['ww2-sniper-rifles']],                                                 // 2017
+        ['mwr', ['mwr-sniper-rifles']],                                                 // 2016
+        ['iw', ['iw-sniper-rifles']],                                                   // 2016
         ['black-ops-3', [                                                              // 2015
           ['bo3-sniper-rifles', ['svg', 'locus']],
         ]],
-        'aw',                                                                          // 2014
+        ['aw', ['aw-sniper-rifles']],                                                   // 2014
         ['ghosts', [                                                                   // 2013
-          ['ghosts-sniper-rifles', ['usr', 'lynx']],
+          'ghosts-assault-rifles',
+          ['ghosts-sniper-rifles', ['usr', 'lynx', 'l115']],
         ]],
         ['black-ops-2', [                                                              // 2012
+          'bo2-assault-rifles', 'bo2-smgs',
           ['bo2-sniper-rifles', ['svu-as', 'dsr50', 'ballista', 'xpr-50']],
         ]],
         ['modern-warfare-3', [                                                         // 2011
           ['mw3-sniper-rifles', ['barrett-50cal-mw3', 'l118a', 'as50', 'rsass', 'dragunov', 'msr']],
         ]],
         ['black-ops-1', [                                                              // 2010
-          ['bo1-sniper-rifles', ['dragunov-bo1', 'wa2000-bo1', 'l96a1', 'psg-1']],
           'bo1-assault-rifles',
+          ['bo1-sniper-rifles', ['dragunov-bo1', 'wa2000-bo1', 'l96a1', 'psg-1']],
         ]],
         ['modern-warfare-2', [                                                         // 2009
+          'mw2-assault-rifles',
           ['mw2-sniper-rifles', ['intervention', 'barrett-50cal', 'wa2000', 'm21-ebr']],
-          'mw2-assault-rifles', 'mw2-secondaries', 'mw2-misc',
+          'mw2-secondaries', 'mw2-misc',
         ]],
-        ['world-at-war', [                                                             // 2008
-          'waw-sniper-rifles',
-        ]],
+        ['world-at-war', ['waw-sniper-rifles']],                                        // 2008
         ['cod-4', [                                                                    // 2007
           ['cod4-sniper-rifles', ['m40a3', 'r700']],
         ]],
-        ['zombies', ['ray-gun', 'thundergun', 'wunderwaffe', 'blundergat']],
+        ['zombies', [
+          ['blundergat', ['ray-gun', 'thundergun', 'wunderwaffe']],                    // "Wonder Weapons"
+        ]],
         'call-of-duty-mobile',
         'map-screenshot-packs',
         'callsigns',
