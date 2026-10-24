@@ -31,6 +31,8 @@ const collections = [
     { id: "tiktok", title: "TikTok", productCount: 4, url: "https://shop.bysawr.com/collection/tiktok" },
     { id: "instagram", title: "Instagram", productCount: 1, url: "https://shop.bysawr.com/collection/instagram" },
     { id: "twitch", title: "Twitch", productCount: 6, url: "https://shop.bysawr.com/collection/twitch" },
+    { id: "facebook", title: "Facebook", productCount: 1, url: "https://shop.bysawr.com/collection/facebook" },
+    { id: "snapchat", title: "Snapchat", productCount: 1, url: "https://shop.bysawr.com/collection/snapchat" },
     { id: "transitions", title: "Transitions", productCount: 20, url: "https://shop.bysawr.com/collection/transitions" },
     { id: "bundles", title: "Bundles", productCount: 3, url: "https://shop.bysawr.com/collection/bundles" },
 
@@ -54,6 +56,10 @@ const collections = [
     { id: "fortnite", title: "Fortnite", productCount: 10, url: "https://shop.bysawr.com/collection/fortnite" },
     { id: "rocket-league", title: "Rocket League", productCount: 2, url: "https://shop.bysawr.com/collection/rocket-league" },
     { id: "xdefiant", title: "XDefiant", productCount: 11, url: "https://shop.bysawr.com/collection/xdefiant" },
+    { id: "battlefield-6", title: "Battlefield 6", productCount: 3, url: "https://shop.bysawr.com/collection/battlefield-6" },
+    { id: "marvel-rivals", title: "Marvel Rivals", productCount: 2, url: "https://shop.bysawr.com/collection/marvel-rivals" },
+    { id: "splitgate-2", title: "Splitgate 2", productCount: 10, url: "https://shop.bysawr.com/collection/splitgate-2" },
+    { id: "the-finals", title: "The Finals", productCount: 1, url: "https://shop.bysawr.com/collection/the-finals" },
 
     // COD Titles
     { id: "vanguard", title: "Vanguard", productCount: 6, url: "https://shop.bysawr.com/collection/vanguard" },
@@ -72,6 +78,8 @@ const collections = [
     { id: "mw3", title: "Modern Warfare 3 / MW3", productCount: 46, url: "https://shop.bysawr.com/collection/modern-warfare-3" },
     { id: "ghosts", title: "Ghosts", productCount: 12, url: "https://shop.bysawr.com/collection/ghosts" },
     { id: "mobile", title: "Call Of Duty Mobile", productCount: 5, url: "https://shop.bysawr.com/collection/call-of-duty-mobile" },
+    { id: "h2m", title: "H2M", productCount: 30, url: "https://shop.bysawr.com/search?q=H2M" },
+    { id: "hmw", title: "HMW", productCount: 20, url: "https://shop.bysawr.com/search?q=HMW" },
 
     // Top Weapons
     { id: "vs-recon", title: "VS Recon", productCount: 127, url: "https://shop.bysawr.com/search?q=vs%20recon" },
@@ -232,11 +240,25 @@ const collections = [
     { id: "mw4-sang-9mm", title: "Sang 9mm (Beta)", productCount: 1, url: "https://shop.bysawr.com/collection/mw4" },
     { id: "mw4-pila", title: "PILA", productCount: 1, url: "https://shop.bysawr.com/collection/mw4" },
     { id: "mw4-combat-knife", title: "Combat Knife", productCount: 1, url: "https://shop.bysawr.com/collection/mw4" },
+    { id: "mw4-mosin-nagant", title: "Mosin-Nagant", productCount: 4, url: "https://shop.bysawr.com/search?q=Mosin" },
+    { id: "mw4-astaroth-57", title: "Astaroth .57", productCount: 8, url: "https://shop.bysawr.com/search?q=Astaroth" },
+    { id: "mw4-mojave-357", title: "Mojave .357", productCount: 1, url: "https://shop.bysawr.com/search?q=Mojave" },
+    { id: "mw4-cornen-squall", title: "Cornen Squall", productCount: 1, url: "https://shop.bysawr.com/search?q=Cornen%20Squall" },
+    { id: "mw4-oden", title: "Oden", productCount: 1, url: "https://shop.bysawr.com/search?q=Oden" },
+    { id: "mw4-vel-46", title: "Vel-46", productCount: 2, url: "https://shop.bysawr.com/search?q=Vel%2046" },
+    { id: "mw4-warlord", title: "Warlord", productCount: 1, url: "https://shop.bysawr.com/search?q=Warlord" },
+    { id: "mw4-apoc-338", title: "APOC-338", productCount: 1, url: "https://shop.bysawr.com/search?q=APOC-338" },
+    { id: "mw4-siren", title: "Siren", productCount: 1, url: "https://shop.bysawr.com/search?q=Siren" },
+    { id: "mw4-strider-300", title: "Strider 300", productCount: 1, url: "https://shop.bysawr.com/search?q=Strider%20300" },
+    { id: "mw4-maps", title: "MW4 Maps", productCount: 3, url: "https://shop.bysawr.com/search?q=MW4%20Maps" },
+    { id: "mw4-zodiac", title: "Zodiac (Warzone Map)", productCount: 1, url: "https://shop.bysawr.com/search?q=Zodiac" },
 
     // Zombies Mastery Camos
     { id: "golden-dragon-camo", title: "Golden Dragon Camo", productCount: 8, url: "https://shop.bysawr.com/search?q=golden%20dragon" },
     { id: "bloodstone-camo", title: "Bloodstone Camo", productCount: 3, url: "https://shop.bysawr.com/search?q=bloodstone" },
     { id: "infestation-camo", title: "Infestation Camo", productCount: 5, url: "https://shop.bysawr.com/search?q=infestation" },
+    { id: "pyroclast-cascade-camo", title: "Pyroclast Cascade Camo", productCount: 1, url: "https://shop.bysawr.com/search?q=pyroclast" },
+    { id: "parallax-camo", title: "Parallax Camo", productCount: 1, url: "https://shop.bysawr.com/search?q=parallax" },
 
     // BO7 Multiplayer Mastery Camos
     { id: "shattered-gold-camo", title: "Shattered Gold Camo", productCount: 24, url: "https://shop.bysawr.com/search?q=shattered%20gold" },
@@ -287,9 +309,9 @@ console.log(updatedCollections);
             icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15l-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></g></svg>`
         },
         {
-            query: "Black Ops 7",
+            query: "Modern Warfare 4",
             type: "collection",
-            url: "https://shop.bysawr.com/collection/black-ops-7",
+            url: "https://shop.bysawr.com/collection/mw4",
             icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15l-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></g></svg>`
         },
 
